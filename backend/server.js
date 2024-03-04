@@ -43,13 +43,9 @@
 
 
 const express = require('express');
-
 var pg = require('pg');
-
 var bodyParser = require('body-parser');
-
 const moment = require('moment');
-
 
 // Connect to elasticsearch Server
 
@@ -59,16 +55,10 @@ const esClient = new elasticsearch.Client({
   log: 'error'
 });
 
-
 // Connect to PostgreSQL server
-
-
 
 var conString = "pg://root:root@127.0.0.1:5432/chicago_divvy_stations_status";
 var pg_connection_divvy_trips = "pg://root:root@127.0.0.1:5432/chicago_divvy_trips";
-
-
-
 
 var pgClient = new pg.Client(conString);
 pgClient.connect();
